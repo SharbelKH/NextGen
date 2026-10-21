@@ -1,0 +1,4 @@
+# Kit files are byte-identical to the course pack: their SHA-256 are checked by check_access.py.
+# Never convert line endings (Windows clones would change the CSV and JSON fingerprints).
+kit-td1/** -text
+*.sqlite binary
