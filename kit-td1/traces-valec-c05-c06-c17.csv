@@ -1,0 +1,108 @@
+cell_id,provider,model_requested,model_returned,case_id,question,prompt_sha256,sql,value,reference,verdict,verdict_detail,http_status,error,latency_ms,tokens_prompt,tokens_completion,tokens_reasoning,cost_native,attempts,date_utc,nature
+groq:openai/gpt-oss-120b:C05,groq,openai/gpt-oss-120b,openai/gpt-oss-120b,C05,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?",b96a003b2b5ae4511254b974c61e08af86ceed7421a162c48b1590f9e646b70c,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00' AND o.date < '2026-06-02 00:00:00';",38480,38480,correct,,200,,690.1,638,116,34,,1,2026-10-21 13:19:06,real
+groq:openai/gpt-oss-20b:C05,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C05,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?",b96a003b2b5ae4511254b974c61e08af86ceed7421a162c48b1590f9e646b70c,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00'
+  AND o.date <  '2026-06-02 00:00:00';",38480,38480,correct,,200,,513.1,638,143,55,,1,2026-10-21 13:19:10,real
+openrouter:cohere/north-mini-code:free:C05,openrouter,cohere/north-mini-code:free,cohere/north-mini-code:free,C05,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?",b96a003b2b5ae4511254b974c61e08af86ceed7421a162c48b1590f9e646b70c,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00' AND o.date < '2026-06-02 00:00:00';",38480,38480,correct,,200,,2178.0,557,75,0,0,1,2026-10-21 13:19:15,real
+groq:qwen/qwen3.8-27b:C05,groq,qwen/qwen3.8-27b,qwen/qwen3.8-27b,C05,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?",b96a003b2b5ae4511254b974c61e08af86ceed7421a162c48b1590f9e646b70c,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00'
+  AND o.date < '2026-06-02 00:00:00';",38480,38480,correct,,200,,337.1,630,95,,,1,2026-10-21 13:19:18,real
+openrouter:dots-studio/dots-3-note-preview:free:C05,openrouter,dots-studio/dots-3-note-preview:free,dots-studio/dots-3-note-preview:free,C05,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?",b96a003b2b5ae4511254b974c61e08af86ceed7421a162c48b1590f9e646b70c,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00' AND o.date < '2026-06-02 00:00:00';",38480,38480,correct,,200,,2057.2,593,92,0,0,1,2026-10-21 13:19:23,real
+groq:openai/gpt-oss-120b:C06,groq,openai/gpt-oss-120b,openai/gpt-oss-120b,C06,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2025-01-01 00:00:00 to 2026-01-01 00:00:00?",e10af71902d58af793255a62dee11db30da6f4df4588be141bb0a82b03923258,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2025-01-01 00:00:00' AND o.date < '2026-01-01 00:00:00';",0,0,correct,,200,,543.2,638,112,30,,1,2026-10-21 13:19:27,real
+groq:openai/gpt-oss-20b:C06,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C06,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2025-01-01 00:00:00 to 2026-01-01 00:00:00?",e10af71902d58af793255a62dee11db30da6f4df4588be141bb0a82b03923258,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2025-01-01 00:00:00'
+  AND o.date <  '2026-01-01 00:00:00';",0,0,correct,,200,,335.4,638,143,55,,1,2026-10-21 13:19:30,real
+openrouter:cohere/north-mini-code:free:C06,openrouter,cohere/north-mini-code:free,cohere/north-mini-code:free,C06,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2025-01-01 00:00:00 to 2026-01-01 00:00:00?",e10af71902d58af793255a62dee11db30da6f4df4588be141bb0a82b03923258,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2025-01-01 00:00:00' AND o.date < '2026-01-01 00:00:00';",0,0,correct,,200,,1104.3,557,75,0,0,1,2026-10-21 13:19:34,real
+groq:qwen/qwen3.8-27b:C06,groq,qwen/qwen3.8-27b,qwen/qwen3.8-27b,C06,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2025-01-01 00:00:00 to 2026-01-01 00:00:00?",e10af71902d58af793255a62dee11db30da6f4df4588be141bb0a82b03923258,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2025-01-01 00:00:00'
+  AND o.date < '2026-01-01 00:00:00';",0,0,correct,,200,,404.2,630,95,,,1,2026-10-21 13:19:38,real
+openrouter:dots-studio/dots-3-note-preview:free:C06,openrouter,dots-studio/dots-3-note-preview:free,dots-studio/dots-3-note-preview:free,C06,"What is the revenue excluding VAT, in euro cents, of the orders placed from 2025-01-01 00:00:00 to 2026-01-01 00:00:00?",e10af71902d58af793255a62dee11db30da6f4df4588be141bb0a82b03923258,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2025-01-01 00:00:00' AND o.date < '2026-01-01 00:00:00';",0,0,correct,,200,,2188.6,593,92,0,0,1,2026-10-21 13:19:43,real
+groq:openai/gpt-oss-120b:C17,groq,openai/gpt-oss-120b,openai/gpt-oss-120b,C17,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",a99fd1bb3b8d470a035c26906d2c14623694590b52ad8bd3d7d392ca305f4d75,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.date >= '2026-01-01 00:00:00' AND o.date < '2026-07-01 00:00:00'
+  AND p.product_id IN ('a','b','c')
+  AND (
+        (strftime('%Y','2026-09-25') - strftime('%Y',c.birth_date))
+        - (strftime('%m-%d','2026-09-25') < strftime('%m-%d',c.birth_date))
+      ) = 25;",258180,258180,correct,,200,,1109.7,666,344,173,,1,2026-10-21 13:19:47,real
+groq:openai/gpt-oss-20b:C17,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C17,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",a99fd1bb3b8d470a035c26906d2c14623694590b52ad8bd3d7d392ca305f4d75,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-01-01 00:00:00'
+  AND o.date <  '2026-07-01 00:00:00'
+  AND p.product_id IN ('a', 'b', 'c')
+  AND c.birth_date <= '2001-09-25'
+  AND c.birth_date >  '2000-09-25';",258180,258180,correct,,200,,1088.1,666,535,391,,1,2026-10-21 13:19:51,real
+openrouter:cohere/north-mini-code:free:C17,openrouter,cohere/north-mini-code:free,cohere/north-mini-code:free,C17,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",a99fd1bb3b8d470a035c26906d2c14623694590b52ad8bd3d7d392ca305f4d75,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id IN ('a','b','c')
+  AND o.date >= '2026-01-01 00:00:00' AND o.date < '2026-07-01 00:00:00'
+  AND c.birth_date <= '2026-09-25'
+  AND (
+        CASE
+          WHEN substr(c.birth_date,6,2)||'-'||substr(c.birth_date,1,4) <= '09-25'
+          THEN strftime('%Y','2026-09-25') - strftime('%Y',c.birth_date)
+          ELSE strftime('%Y','2026-09-25') - strftime('%Y',c.birth_date) - 1
+        END
+      ) = 25;",197080,258180,incorrect,value differs,200,,4094.7,585,209,0,0,1,2026-10-21 13:19:58,real
+groq:qwen/qwen3.8-27b:C17,groq,qwen/qwen3.8-27b,qwen/qwen3.8-27b,C17,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",a99fd1bb3b8d470a035c26906d2c14623694590b52ad8bd3d7d392ca305f4d75,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id IN ('a', 'b', 'c')
+  AND o.date >= '2026-01-01 00:00:00'
+  AND o.date < '2026-07-01 00:00:00'
+  AND (
+    (strftime('%m', c.birth_date) || '-' || strftime('%d', c.birth_date) < '09-25'
+     AND strftime('%Y', c.birth_date) = '2001')
+    OR
+    (strftime('%m', c.birth_date) || '-' || strftime('%d', c.birth_date) >= '09-25'
+     AND strftime('%Y', c.birth_date) = '2000')
+  );",248490,258180,incorrect,value differs,200,,1160.2,663,229,,,1,2026-10-21 13:20:03,real
+openrouter:dots-studio/dots-3-note-preview:free:C17,openrouter,dots-studio/dots-3-note-preview:free,dots-studio/dots-3-note-preview:free,C17,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",a99fd1bb3b8d470a035c26906d2c14623694590b52ad8bd3d7d392ca305f4d75,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id IN ('a', 'b', 'c')
+  AND o.date >= '2026-01-01 00:00:00'
+  AND o.date < '2026-07-01 00:00:00'
+  AND (
+    -- Customer is exactly 25 years old on 2026-09-25
+    -- This means their 25th birthday occurred on or before 2026-09-25,
+    -- and their 26th birthday occurs after 2026-09-25.
+    -- Equivalent to: birth_date + 25 years <= '2026-09-25' AND birth_date + 26 years > '2026-09-25'
+    -- In SQLite, we can use date() function for arithmetic.
+    date(c.birth_date, '+25 years') <= '2026-09-25'
+    AND date(c.birth_date, '+26 years') > '2026-09-25'
+  );",258180,258180,correct,,200,,4272.3,626,306,0,0,1,2026-10-21 13:20:10,real
