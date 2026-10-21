@@ -1,4 +1,4 @@
--- Vérification indépendante de C09 : âge révolu = écart d'années - 1 si l'anniversaire (mois-jour) n'est pas encore passé
+-- C09 check: year difference, minus 1 if birthday not reached yet
 SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
 FROM orders o
 JOIN product   p ON p.product_id  = o.product_id
