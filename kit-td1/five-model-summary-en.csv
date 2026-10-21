@@ -1,6 +1,6 @@
 provider,model_id,public_index,index_date,index_source,paid_route_same_model,input_usd_per_million,output_usd_per_million,price_date,price_source,access_used,period_results,age_results,product_results,combined_results,trace_files,limits
-groq,openai/gpt-oss-120b,,,,,,,,,,,,,,,
-groq,openai/gpt-oss-20b,,,,,,,,,,,,,,,
-openrouter,inclusionai/ling-3.0-flash-sante:free,,,,,,,,,,,,,,,
-groq,qwen/qwen3.8-27b,,,,,,,,,,,,,,,
-openrouter,dots-studio/dots-3-note-preview:free,,,,,,,,,,,,,,,
+groq,openai/gpt-oss-120b,11.6,2026-09-28,portefeuille-modeles-2026-09-28.csv,Groq Developer,0.15,0.60,2026-10-05,https://console.groq.com/docs/models (cost method of the course),"Groq Free plan, no payment",,,,,,
+groq,openai/gpt-oss-20b,9,2026-09-28,portefeuille-modeles-2026-09-28.csv,Groq Developer,0.075,0.30,2026-10-05,https://console.groq.com/docs/models (cost method of the course),"Groq Free plan, no payment",,,,,,
+openrouter,cohere/north-mini-code:free,N/A,,not in portefeuille-modeles-2026-09-28.csv; no documented index,N/A: catalogue lists only the :free route,N/A,N/A,2026-10-21,https://openrouter.ai/api/v1/models,"OpenRouter :free route, max_price 0",,,,,,
+groq,qwen/qwen3.8-27b,33.7,2026-09-28,portefeuille-modeles-2026-09-28.csv,Groq Developer,0.80,4.00,2026-10-05,https://console.groq.com/docs/models (cost method of the course),"Groq Free plan, no payment",,,,,,
+openrouter,dots-studio/dots-3-note-preview:free,N/A,,not in portefeuille-modeles-2026-09-28.csv; no documented index,N/A: catalogue lists only the :free route,N/A,N/A,2026-10-21,https://openrouter.ai/api/v1/models,"OpenRouter :free route, max_price 0",,,,,,

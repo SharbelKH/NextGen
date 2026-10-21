@@ -1,4 +1,4 @@
--- Vérification indépendante de C10 : même formule d'âge révolu, avec la date de chaque commande
+-- C10 check: same age formula with o.date
 SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
 FROM orders o
 JOIN product   p ON p.product_id  = o.product_id

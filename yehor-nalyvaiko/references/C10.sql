@@ -1,5 +1,4 @@
--- C10 : commandes passées quand le client avait exactement 25 ans révolus à la date de la commande
--- 25 ans révolus le jour J <=> J-26 ans < naissance <= J-25 ans
+-- C10: exactly 25 on the order date
 SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
 FROM orders o
 JOIN product   p ON p.product_id  = o.product_id

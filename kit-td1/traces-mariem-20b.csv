@@ -1,0 +1,12 @@
+cell_id,provider,model_requested,model_returned,case_id,question,prompt_sha256,sql,value,reference,verdict,verdict_detail,http_status,error,latency_ms,tokens_prompt,tokens_completion,tokens_reasoning,cost_native,attempts,date_utc,nature
+groq:openai/gpt-oss-20b:C03,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C03,"What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00?",5d8e7c01aa0646ca4a352456f4abb4665fc48e546a82767d6827a905d70d21be,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.product_id IN ('a', 'b', 'c')
+  AND o.date >= '2026-01-01 00:00:00'
+  AND o.date <  '2026-07-01 00:00:00';",936350,936350,correct,,200,,1260.3,646,125,22,,1,2026-10-21 13:35:40,real
+groq:openai/gpt-oss-20b:C04,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C04,"What is the total revenue excluding VAT, in euro cents, of the orders placed from 2026-01-01 00:00:00 to 2026-10-01 00:00:00?",c2a73db35adea5cd8622a7c03a9ba03687f12bfcd2e4b40893c93685f34016f4,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+WHERE o.date >= '2026-01-01 00:00:00'
+  AND o.date <  '2026-10-01 00:00:00';",2826250,2826250,correct,,200,,599.8,639,114,26,,1,2026-10-21 13:35:44,real

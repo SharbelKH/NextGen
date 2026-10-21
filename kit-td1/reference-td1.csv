@@ -1,21 +1,21 @@
 case_id,sql,revenue_cents
 C01,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders AS o JOIN product AS p ON o.product_id = p.product_id WHERE o.date >= '2026-03-01 00:00:00' AND o.date < '2026-06-01 00:00:00';",792800
 C02,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders AS o JOIN customers AS c ON o.customer_id = c.customer_id JOIN product AS p ON o.product_id = p.product_id WHERE c.birth_date > '2000-09-25' AND c.birth_date <= '2001-09-25';",590320
-C03,,
-C04,,
-C05,,
-C06,,
-C07,,
-C08,,
-C09,,
-C10,,
-C11,,
-C12,,
-C13,,
-C14,,
-C15,,
-C16,,
-C17,,
-C18,,
-C19,,
-C20,,
+C03,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders o JOIN product p ON o.product_id = p.product_id WHERE o.product_id IN ('a','b','c') AND o.date >= '2026-01-01 00:00:00' AND o.date < '2026-07-01 00:00:00';",936350
+C04,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders o JOIN product p ON o.product_id = p.product_id WHERE o.date >= '2026-01-01 00:00:00' AND o.date < '2026-10-01 00:00:00';",2826250
+C05,,38480
+C06,,0
+C07,,13970
+C08,,605580
+C09,,487980
+C10,,558980
+C11,,446690
+C12,,1666490
+C13,,107740
+C14,,0
+C15,,168680
+C16,,376740
+C17,,258180
+C18,,62480
+C19,,1990
+C20,,1106090
