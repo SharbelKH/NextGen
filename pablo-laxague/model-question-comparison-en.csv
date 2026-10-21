@@ -1,0 +1,16 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C13,groq:openai/gpt-oss-120b,traces-td1.csv,groq:openai/gpt-oss-120b:C13,real,correct,107740,107740,Generated SQL executed successfully and the returned value matches the reference.
+C14,groq:openai/gpt-oss-120b,traces-td1.csv,groq:openai/gpt-oss-120b:C14,real,correct,0,0,Generated SQL executed successfully and the returned value matches the reference.
+C18,groq:openai/gpt-oss-120b,traces-td1.csv,groq:openai/gpt-oss-120b:C18,real,correct,62480,62480,Generated SQL executed successfully and the returned value matches the reference.
+C13,groq:openai/gpt-oss-20b,traces-td1.csv,groq:openai/gpt-oss-20b:C13,real,correct,107740,107740,Generated SQL executed successfully and the returned value matches the reference.
+C14,groq:openai/gpt-oss-20b,traces-td1.csv,groq:openai/gpt-oss-20b:C14,real,correct,0,0,Generated SQL executed successfully and the returned value matches the reference.
+C18,groq:openai/gpt-oss-20b,traces-td1.csv,groq:openai/gpt-oss-20b:C18,real,correct,62480,62480,Generated SQL executed successfully and the returned value matches the reference.
+C13,openrouter:cohere/north-mini-code:free,traces-td1.csv,openrouter:cohere/north-mini-code:free:C13,real,correct,107740,107740,Generated SQL executed successfully and the returned value matches the reference.
+C14,openrouter:cohere/north-mini-code:free,traces-td1.csv,openrouter:cohere/north-mini-code:free:C14,real,correct,0,0,Generated SQL executed successfully and the returned value matches the reference.
+C18,openrouter:cohere/north-mini-code:free,traces-td1.csv,openrouter:cohere/north-mini-code:free:C18,real,correct,62480,62480,Generated SQL executed successfully and the returned value matches the reference.
+C13,groq:qwen/qwen3.8-27b,traces-td1.csv,groq:qwen/qwen3.8-27b:C13,real,correct,107740,107740,Generated SQL executed successfully and the returned value matches the reference.
+C14,groq:qwen/qwen3.8-27b,traces-td1.csv,groq:qwen/qwen3.8-27b:C14,real,correct,0,0,Generated SQL executed successfully and the returned value matches the reference.
+C18,groq:qwen/qwen3.8-27b,traces-td1.csv,groq:qwen/qwen3.8-27b:C18,real,correct,62480,62480,Generated SQL executed successfully and the returned value matches the reference.
+C13,openrouter:dots-studio/dots-3-note-preview:free,traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C13,real,correct,107740,107740,Generated SQL executed successfully and the returned value matches the reference.
+C14,openrouter:dots-studio/dots-3-note-preview:free,traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C14,real,correct,0,0,Generated SQL executed successfully and the returned value matches the reference.
+C18,openrouter:dots-studio/dots-3-note-preview:free,traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C18,real,incorrect,39580,62480,"Incorrect age filter: it requires the calendar-year difference to equal 25 and the birthday to have occurred. This omits customers born in 2000 whose 26th birthday had not yet occurred on the order date in May 2026, even though they were still 25. Returned 39580 cents vs reference 62480 cents."
