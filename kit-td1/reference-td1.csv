@@ -1,21 +1,50 @@
-case_id,sql,revenue_cents
-C01,,
-C02,,
-C03,,
-C04,,
-C05,,
-C06,,
-C07,,
-C08,,
-C09,,
-C10,,
-C11,,
-C12,,
-C13,,
-C14,,
-C15,,
-C16,,
-C17,,
-C18,,
-C19,,
-C20,,
+case_id;sql;revenue_cents
+C01;;
+C02;;
+C03;;
+C04;;
+C05;;
+C06;;
+C07;;
+C08;;
+C09;;
+C10;;
+C11;;
+C12;;
+C13;SELECT sum(o.quantity_product*p.price) as total_revenue 
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+WHERE o.product_id IN ('a','c')
+AND o.date >= '2026-04-01 00:00:00'
+AND o.date <= '2026-05-01 00:00:00',107740;
+C14;SELECT sum(o.quantity_product*p.price) as total_revenue
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+WHERE o.product_id IN ('a','b','c')
+AND o.date >= '2026-10-01 00:00:00'
+AND o.date <= '2026-12-01 00:00:00';0
+C15;;
+C16;;
+C17;;
+C18;SELECT SUM(o.quantity_product * p.price) AS total_revenue
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+JOIN customers AS c ON o.customer_id = c.customer_id
+WHERE o.date >= '2026-05-01'
+  AND o.date <  '2026-06-01'
+  AND CAST(strftime('%Y', o.date) AS INTEGER) - CAST(strftime('%Y', c.birth_date) AS INTEGER)
+      - (strftime('%m-%d', o.date) < strftime('%m-%d', c.birth_date)) = 25;62480
+C19;SELECT SUM(o.quantity_product * p.price) AS total_revenue
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+JOIN customers AS c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01'
+  AND o.date <  '2026-12-01'
+  AND c.birth_date >  '2000-09-25'
+  AND c.birth_date <= '2001-09-25';1990;
+C20;SELECT sum(o.quantity_product*p.price) as total_revenue 
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+WHERE o.date >= '2026-06-01 00:00:00'
+AND o.date <= '2026-09-01 00:00:00';1106090
