@@ -54,3 +54,53 @@ openrouter:dots-studio/dots-3-note-preview:free:C12,openrouter,dots-studio/dots-
 FROM orders o
 JOIN product p ON o.product_id = p.product_id
 WHERE o.product_id IN ('a', 'b', 'c');",1666490,1666490,correct,,200,,1910.2,560,56,0,0,1,2026-10-21 12:59:17,real
+groq:openai/gpt-oss-120b:C19,groq,openai/gpt-oss-120b,openai/gpt-oss-120b,C19,"What is the revenue excluding VAT, in euro cents, of product d only, for orders placed from 2026-09-01 00:00:00 to 2026-10-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",e5396619f946e273f11d2baf48666f84d8a817fde9f7189579c96ce2c2a14119,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01 00:00:00'
+  AND o.date < '2026-10-01 00:00:00'
+  AND c.birth_date = date('2026-09-25', '-25 years');",0,1990,incorrect,value differs,200,,1283.5,662,413,290,,1,2026-10-21 13:11:28,real
+groq:openai/gpt-oss-20b:C19,groq,openai/gpt-oss-20b,openai/gpt-oss-20b,C19,"What is the revenue excluding VAT, in euro cents, of product d only, for orders placed from 2026-09-01 00:00:00 to 2026-10-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",e5396619f946e273f11d2baf48666f84d8a817fde9f7189579c96ce2c2a14119,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01 00:00:00'
+  AND o.date <  '2026-10-01 00:00:00'
+  AND c.birth_date >  '2000-09-25'
+  AND c.birth_date <= '2001-09-25';",1990,1990,correct,,200,,888.1,662,414,276,,1,2026-10-21 13:11:32,real
+openrouter:cohere/north-mini-code:free:C19,openrouter,cohere/north-mini-code:free,cohere/north-mini-code:free,C19,"What is the revenue excluding VAT, in euro cents, of product d only, for orders placed from 2026-09-01 00:00:00 to 2026-10-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",e5396619f946e273f11d2baf48666f84d8a817fde9f7189579c96ce2c2a14119,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01 00:00:00' AND o.date < '2026-10-01 00:00:00'
+  AND c.birth_date <= date('2026-09-25', '-' || CAST((strftime('%Y-%m-%d', '2026-09-25') - strftime('%Y-%m-%d', c.birth_date)) / 365 AS INTEGER) || ' years')
+  AND c.birth_date > date('2026-09-25', '-' || CAST((strftime('%Y-%m-%d', '2026-09-25') - strftime('%Y-%m-%d', c.birth_date)) / 365 + 1 AS INTEGER) || ' years');",0,1990,incorrect,value differs,200,,3955.0,581,217,0,0,1,2026-10-21 13:11:39,real
+groq:qwen/qwen3.8-27b:C19,groq,qwen/qwen3.8-27b,qwen/qwen3.8-27b,C19,"What is the revenue excluding VAT, in euro cents, of product d only, for orders placed from 2026-09-01 00:00:00 to 2026-10-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",e5396619f946e273f11d2baf48666f84d8a817fde9f7189579c96ce2c2a14119,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01 00:00:00'
+  AND o.date < '2026-10-01 00:00:00'
+  AND (
+    (strftime('%m-%d', c.birth_date) <= strftime('%m-%d', '2026-09-25')
+     AND strftime('%Y', date(c.birth_date, '+25 years')) <= '2026-09-25')
+    OR
+    (strftime('%m-%d', c.birth_date) > strftime('%m-%d', '2026-09-25')
+     AND strftime('%Y', date(c.birth_date, '+24 years')) <= '2026-09-25')
+  );",83580,1990,incorrect,value differs,200,,806.9,659,251,,,1,2026-10-21 13:11:42,real
+openrouter:dots-studio/dots-3-note-preview:free:C19,openrouter,dots-studio/dots-3-note-preview:free,dots-studio/dots-3-note-preview:free,C19,"What is the revenue excluding VAT, in euro cents, of product d only, for orders placed from 2026-09-01 00:00:00 to 2026-10-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?",e5396619f946e273f11d2baf48666f84d8a817fde9f7189579c96ce2c2a14119,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON o.product_id = p.product_id
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.product_id = 'd'
+  AND o.date >= '2026-09-01 00:00:00'
+  AND o.date < '2026-10-01 00:00:00'
+  AND (CAST(strftime('%Y', '2026-09-25') AS INTEGER) - CAST(strftime('%Y', c.birth_date) AS INTEGER)) = 25
+  AND (CAST(strftime('%m', '2026-09-25') AS INTEGER) > CAST(strftime('%m', c.birth_date) AS INTEGER)
+       OR (CAST(strftime('%m', '2026-09-25') AS INTEGER) = CAST(strftime('%m', c.birth_date) AS INTEGER)
+           AND CAST(strftime('%d', '2026-09-25') AS INTEGER) >= CAST(strftime('%d', c.birth_date) AS INTEGER)));",1990,1990,correct,,200,,4040.1,622,270,0,0,1,2026-10-21 13:11:50,real
