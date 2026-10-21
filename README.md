@@ -5,7 +5,7 @@ Course site (single reference): https://storage.googleapis.com/docs.g.quanticfac
 
 | | |
 |---|---|
-| DIA / sub-group | _to complete_ |
+| DIA / sub-group | **DIA1** (instructor: Didier Parisot) — sub-group number _to complete_ |
 | Members | _to complete (name — GitHub account — TD 1 role A–H)_ |
 | Course pack | `2026-10-18-students-1` (student ZIP `esilv-student-2026-10-18.zip`, sha256 `e14ebfb4437ca6a5…`) |
 | Database | `kit-td1/data/boutique.sqlite`, sha256 `0077e235…3398fec2`, identical to `kit-td1/data/manifest.json` |
