@@ -80,7 +80,5 @@ portfolio summary and session report.
 
 ## AI assistance
 
-I used Codex to help build and understand the reference queries, adapt the
-database path, diagnose the authentication problem, change the resume rule,
-and prepare the comparison and this write-up. I ran the course scripts myself.
-Codex read the saved traces to explain the SQL errors; it did not run model calls.
+I used Codex for help with the queries, authentication retry fix and results
+analysis. I ran the scripts and model calls myself.
