@@ -23,4 +23,4 @@ C09 = 487980, C10 = 558980 (same as the published values).
 
 Causes: `comparison-yehor-C09-C10.csv`.
 
-AI was used to help write the SQL and read the traces; all values were checked on the database.
+AI was used to help write the SQL and read the traces; all values were checked on the database. Details: [`coding-assistance.md`](coding-assistance.md).
