@@ -7,5 +7,5 @@ C09,openrouter:dots-studio/dots-3-note-preview:free,yehor-nalyvaiko/traces/trace
 C10,groq:openai/gpt-oss-120b,yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-120b:C10,real,correct,558980,558980,"correct, attempt 1"
 C10,groq:openai/gpt-oss-20b,yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-20b:C10,real,correct,558980,558980,"correct, attempt 1"
 C10,openrouter:cohere/north-mini-code:free,yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:cohere/north-mini-code:free:C10,real,incorrect,548920,558980,CAST(date AS INTEGER) keeps the year only -> year difference
-C10,groq:qwen/qwen3.8-27b,yehor-nalyvaiko/traces/traces-yehor.csv,groq:qwen/qwen3.8-27b:C10,real,sql_rejected,,558980,"sql_rejected: SQL inside a markdown block, HTTP 200 -> format error, not access"
+C10,groq:qwen/qwen3.8-27b,yehor-nalyvaiko/traces/traces-yehor.csv,groq:qwen/qwen3.8-27b:C10,real,sql_rejected,,558980,"sql_rejected: opened a sql fence without closing it (185/1000 tokens, not cut); extractor strips closed fences only -> not_select; HTTP 200 = format error, not access"
 C10,openrouter:dots-studio/dots-3-note-preview:free,yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:dots-studio/dots-3-note-preview:free:C10,real,incorrect,119410,558980,"only diff 25 with birthday passed, misses diff 26 before birthday -> too low"
