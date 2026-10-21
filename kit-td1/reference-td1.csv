@@ -1,8 +1,8 @@
 case_id,sql,revenue_cents
 C01,,
 C02,,
-C03,,
-C04,,
+C03,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders o JOIN product p ON o.product_id = p.product_id WHERE o.product_id IN ('a', 'b', 'c') AND o.date >= '2026-01-01 00:00:00' AND o.date < '2026-07-01 00:00:00';",936350
+C04,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders o JOIN product p ON o.product_id = p.product_id WHERE o.date >= '2026-01-01 00:00:00' AND o.date < '2026-10-01 00:00:00';",2826250
 C05,,
 C06,,
 C07,,
