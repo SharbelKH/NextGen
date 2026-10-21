@@ -478,6 +478,10 @@ class TableTraces:
 
     def verified(self, cell_id: str, nature: str = "real") -> bool:
         trace = self.latest(cell_id, nature)
+        # Let an explicit resume retry authentication after the key is fixed.
+        # interroger_tous still enforces two total attempts per cell.
+        if trace is not None and trace.verdict == "access_error" and str(trace.http_status) == "401":
+            return False
         return trace is not None and (trace.verdict in VERIFIED_VERDICTS or
                                       (trace.verdict == "" and trace.value != ""))
 
