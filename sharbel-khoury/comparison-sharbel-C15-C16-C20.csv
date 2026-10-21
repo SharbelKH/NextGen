@@ -1,0 +1,16 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C15,groq:openai/gpt-oss-120b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C15,real,correct,168680,168680,Matches the teacher-provided reference.
+C15,groq:openai/gpt-oss-20b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C15,real,correct,168680,168680,Matches the teacher-provided reference.
+C15,openrouter:cohere/north-mini-code:free,traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C15,real,correct,168680,168680,Matches the teacher-provided reference. Second attempt after HTTP 401; the OpenRouter key was replaced.
+C15,groq:qwen/qwen3.8-27b,traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C15,real,incorrect,0,168680,"The birthday must be both on or before 09-25 and after 09-25, so no customer matches. The query does not check the birth year."
+C15,openrouter:dots-studio/dots-3-note-preview:free,traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C15,real,correct,168680,168680,Matches the teacher-provided reference. Second attempt after HTTP 401; the OpenRouter key was replaced.
+C16,groq:openai/gpt-oss-120b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C16,real,correct,376740,376740,Matches the teacher-provided reference.
+C16,groq:openai/gpt-oss-20b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C16,real,correct,376740,376740,Matches the teacher-provided reference.
+C16,openrouter:cohere/north-mini-code:free,traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C16,real,correct,376740,376740,Matches the teacher-provided reference. Second attempt after HTTP 401; the OpenRouter key was replaced.
+C16,groq:qwen/qwen3.8-27b,traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C16,real,incorrect,367050,376740,The birthday boundaries are wrong: it excludes customers turning 25 on the reference date and includes customers turning 26 that day.
+C16,openrouter:dots-studio/dots-3-note-preview:free,traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C16,real,incorrect,218760,376740,The birth-date range selects customers younger than 25. The last month-day condition is always true for valid birthdays. Second attempt after HTTP 401; the OpenRouter key was replaced.
+C20,groq:openai/gpt-oss-120b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,groq:openai/gpt-oss-20b,traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,openrouter:cohere/north-mini-code:free,traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C20,real,correct,1106090,1106090,Matches the teacher-provided reference. Second attempt after HTTP 401; the OpenRouter key was replaced.
+C20,groq:qwen/qwen3.8-27b,traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,openrouter:dots-studio/dots-3-note-preview:free,traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C20,real,correct,1106090,1106090,Matches the teacher-provided reference. Second attempt after HTTP 401; the OpenRouter key was replaced.
