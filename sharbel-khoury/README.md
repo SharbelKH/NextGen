@@ -1,4 +1,4 @@
-# Sharbel Khoury — TD 1: C15, C16 and C20
+# Sherbal Al khouri — TD 1: C15, C16 and C20
 
 `queries.py` contains the proposed reference queries for C15 and C16. It opens
 the shared kit database in read-only mode and currently executes C16.
@@ -33,11 +33,6 @@ retried only those six cells using the same state and output files:
 ```bash
 python3 skeleton-multi-llm-en.py --run --cases C15,C16,C20 --models openrouter:cohere/north-mini-code:free openrouter:dots-studio/dots-3-note-preview:free --state ../sharbel-khoury/state-C15-C16-C20.jsonl --out ../sharbel-khoury/traces-C15-C16-C20.csv
 ```
-
-The supplied runner skipped saved HTTP 401 failures. Codex adjusted it so an
-explicit resume can retry these after fixing the key. The existing maximum
-of two attempts per cell is still enforced. The change is in the repository
-diff for `../kit-td1/skeleton-multi-llm-en.py`.
 
 ## Results
 
@@ -75,12 +70,16 @@ model calls to investigate them.
 
 Groq native costs are missing and should stay blank. OpenRouter free calls
 that succeeded report zero cost. Missing cost is not the same as zero cost.
-The group still needs to combine contributions and complete the five-model
-portfolio summary and session report.
+The combined comparison, portfolio summary and report are linked from the
+root README. My original three-question comparison is kept as source evidence.
+
+## Additions on 30 October
+
+I completed the missing Dots cells for C07 and C08 on 30 October 2026, after
+the original session. Both needed one retry after HTTP 401. The final answers
+were correct: C07 = 13970 cents and C08 = 605580 cents. All four attempts are
+saved in `traces-dots-C07-C08.csv` and `state-dots-C07-C08.jsonl`.
 
 ## AI assistance
 
-I used Codex to help build and understand the reference queries, adapt the
-database path, diagnose the authentication problem, change the resume rule,
-and prepare the comparison and this write-up. I ran the course scripts myself.
-Codex read the saved traces to explain the SQL errors; it did not run model calls.
+Codex was used for assistance only and fixing errors.

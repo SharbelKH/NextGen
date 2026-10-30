@@ -1,1 +1,101 @@
 case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C01,groq:openai/gpt-oss-120b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:openai/gpt-oss-120b:C01,real,correct,792800,792800,Matches the teacher-provided reference.
+C01,groq:openai/gpt-oss-20b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:openai/gpt-oss-20b:C01,real,correct,792800,792800,Matches the teacher-provided reference.
+C01,openrouter:cohere/north-mini-code:free,../kit-td1/raw-c01-c02/traces-td1.csv,openrouter:cohere/north-mini-code:free:C01,real,correct,792800,792800,Matches the teacher-provided reference.
+C01,groq:qwen/qwen3.8-27b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:qwen/qwen3.8-27b:C01,real,correct,792800,792800,Matches the teacher-provided reference.
+C01,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/raw-c01-c02/traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C01,real,correct,792800,792800,Matches the teacher-provided reference.
+C02,groq:openai/gpt-oss-120b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:openai/gpt-oss-120b:C02,real,correct,590320,590320,Matches the teacher-provided reference.
+C02,groq:openai/gpt-oss-20b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:openai/gpt-oss-20b:C02,real,incorrect,0,590320,Uses births in 2025-2026 instead of the one-year window for completed age 25.
+C02,openrouter:cohere/north-mini-code:free,../kit-td1/raw-c01-c02/traces-td1.csv,openrouter:cohere/north-mini-code:free:C02,real,incorrect,321340,590320,Requires the birthday to have passed in 2026. It misses customers born after 25 September 2000 who are still 25.
+C02,groq:qwen/qwen3.8-27b,../kit-td1/raw-c01-c02/traces-td1.csv,groq:qwen/qwen3.8-27b:C02,real,correct,590320,590320,Matches the teacher-provided reference.
+C02,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/raw-c01-c02/traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C02,real,incorrect,0,590320,Keeps only births on 25 September 2001 and invents a one-day order period instead of using all orders.
+C03,groq:openai/gpt-oss-120b,../kit-td1/traces-mariem-120b.csv,groq:openai/gpt-oss-120b:C03,real,correct,936350,936350,Matches the teacher-provided reference.
+C03,groq:openai/gpt-oss-20b,../kit-td1/traces-mariem-20b.csv,groq:openai/gpt-oss-20b:C03,real,correct,936350,936350,Matches the teacher-provided reference.
+C03,openrouter:cohere/north-mini-code:free,../kit-td1/traces-mariem-cohere.csv,openrouter:cohere/north-mini-code:free:C03,real,correct,936350,936350,Matches the teacher-provided reference.
+C03,groq:qwen/qwen3.8-27b,../kit-td1/traces-mariem-qwen.csv,groq:qwen/qwen3.8-27b:C03,real,sql_rejected,,936350,Returned an unclosed markdown SQL fence. The extractor left it in the SQL and the sandbox rejected not_select; HTTP 200 was successful access.
+C03,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/traces-mariem-dots.csv,openrouter:dots-studio/dots-3-note-preview:free:C03,real,correct,936350,936350,Matches the teacher-provided reference.
+C04,groq:openai/gpt-oss-120b,../kit-td1/traces-mariem-120b.csv,groq:openai/gpt-oss-120b:C04,real,correct,2826250,2826250,Matches the teacher-provided reference.
+C04,groq:openai/gpt-oss-20b,../kit-td1/traces-mariem-20b.csv,groq:openai/gpt-oss-20b:C04,real,correct,2826250,2826250,Matches the teacher-provided reference.
+C04,openrouter:cohere/north-mini-code:free,../kit-td1/traces-mariem-cohere.csv,openrouter:cohere/north-mini-code:free:C04,real,correct,2826250,2826250,Matches the teacher-provided reference.
+C04,groq:qwen/qwen3.8-27b,../kit-td1/traces-mariem-qwen.csv,groq:qwen/qwen3.8-27b:C04,real,correct,2826250,2826250,Matches the teacher-provided reference.
+C04,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/traces-mariem-dots.csv,openrouter:dots-studio/dots-3-note-preview:free:C04,real,correct,2826250,2826250,Matches the teacher-provided reference.
+C05,groq:openai/gpt-oss-120b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-120b:C05,real,correct,38480,38480,Matches the teacher-provided reference.
+C05,groq:openai/gpt-oss-20b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-20b:C05,real,correct,38480,38480,Matches the teacher-provided reference.
+C05,openrouter:cohere/north-mini-code:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:cohere/north-mini-code:free:C05,real,correct,38480,38480,Matches the teacher-provided reference.
+C05,groq:qwen/qwen3.8-27b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:qwen/qwen3.8-27b:C05,real,correct,38480,38480,Matches the teacher-provided reference.
+C05,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:dots-studio/dots-3-note-preview:free:C05,real,correct,38480,38480,Matches the teacher-provided reference.
+C06,groq:openai/gpt-oss-120b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-120b:C06,real,correct,0,0,Matches the teacher-provided reference.
+C06,groq:openai/gpt-oss-20b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-20b:C06,real,correct,0,0,Matches the teacher-provided reference.
+C06,openrouter:cohere/north-mini-code:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:cohere/north-mini-code:free:C06,real,correct,0,0,Matches the teacher-provided reference.
+C06,groq:qwen/qwen3.8-27b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:qwen/qwen3.8-27b:C06,real,correct,0,0,Matches the teacher-provided reference.
+C06,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:dots-studio/dots-3-note-preview:free:C06,real,correct,0,0,Matches the teacher-provided reference.
+C07,groq:openai/gpt-oss-120b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:openai/gpt-oss-120b:C07,real,correct,13970,13970,Matches the teacher-provided reference.
+C07,groq:openai/gpt-oss-20b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:openai/gpt-oss-20b:C07,real,correct,13970,13970,Matches the teacher-provided reference.
+C07,openrouter:cohere/north-mini-code:free,../kit-td1/adam-nasri-work/traces-c07-c08.csv,openrouter:cohere/north-mini-code:free:C07,real,correct,13970,13970,Matches the teacher-provided reference.
+C07,groq:qwen/qwen3.8-27b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:qwen/qwen3.8-27b:C07,real,correct,13970,13970,Matches the teacher-provided reference.
+C07,openrouter:dots-studio/dots-3-note-preview:free,../sharbel-khoury/traces-dots-C07-C08.csv,openrouter:dots-studio/dots-3-note-preview:free:C07,real,correct,13970,13970,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained. Late addition by Sherbal Al khouri on 30 October 2026; not part of the original session-day batch.
+C08,groq:openai/gpt-oss-120b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:openai/gpt-oss-120b:C08,real,correct,605580,605580,Matches the teacher-provided reference.
+C08,groq:openai/gpt-oss-20b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:openai/gpt-oss-20b:C08,real,correct,605580,605580,Matches the teacher-provided reference.
+C08,openrouter:cohere/north-mini-code:free,../kit-td1/adam-nasri-work/traces-c07-c08.csv,openrouter:cohere/north-mini-code:free:C08,real,incorrect,1553040,605580,"The birthday test mostly selects birthdays on or before 24 September without requiring the correct birth year, so it includes other ages."
+C08,groq:qwen/qwen3.8-27b,../kit-td1/adam-nasri-work/traces-c07-c08.csv,groq:qwen/qwen3.8-27b:C08,real,correct,605580,605580,Matches the teacher-provided reference.
+C08,openrouter:dots-studio/dots-3-note-preview:free,../sharbel-khoury/traces-dots-C07-C08.csv,openrouter:dots-studio/dots-3-note-preview:free:C08,real,correct,605580,605580,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained. Late addition by Sherbal Al khouri on 30 October 2026; not part of the original session-day batch.
+C09,groq:openai/gpt-oss-120b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-120b:C09,real,correct,487980,487980,Matches the teacher-provided reference.
+C09,groq:openai/gpt-oss-20b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-20b:C09,real,correct,487980,487980,Matches the teacher-provided reference.
+C09,openrouter:cohere/north-mini-code:free,../yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:cohere/north-mini-code:free:C09,real,incorrect,0,487980,Compares the birth year minus a birthday adjustment with 25; it never subtracts the birth year from 2026.
+C09,groq:qwen/qwen3.8-27b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:qwen/qwen3.8-27b:C09,real,incorrect,0,487980,"Uses the order date instead of the reference date and requires month-day to be both >= and < the same birthday, so no row matches."
+C09,openrouter:dots-studio/dots-3-note-preview:free,../yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:dots-studio/dots-3-note-preview:free:C09,real,incorrect,548920,487980,The birthday OR branches cover every birthday in birth year 2001. This reduces to a year-only age test.
+C10,groq:openai/gpt-oss-120b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-120b:C10,real,correct,558980,558980,Matches the teacher-provided reference.
+C10,groq:openai/gpt-oss-20b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:openai/gpt-oss-20b:C10,real,correct,558980,558980,Matches the teacher-provided reference.
+C10,openrouter:cohere/north-mini-code:free,../yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:cohere/north-mini-code:free:C10,real,incorrect,548920,558980,"Casting a date string to INTEGER keeps its year, so age is computed without checking the birthday."
+C10,groq:qwen/qwen3.8-27b,../yehor-nalyvaiko/traces/traces-yehor.csv,groq:qwen/qwen3.8-27b:C10,real,sql_rejected,,558980,Returned an unclosed markdown SQL fence. The extractor left it in the SQL and the sandbox rejected not_select; HTTP 200 was successful access.
+C10,openrouter:dots-studio/dots-3-note-preview:free,../yehor-nalyvaiko/traces/traces-yehor.csv,openrouter:dots-studio/dots-3-note-preview:free:C10,real,incorrect,119410,558980,"Keeps year difference 25 after the birthday but misses year difference 26 before the birthday, when the customer is still 25."
+C11,groq:openai/gpt-oss-120b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-120b:C11,real,correct,446690,446690,Matches the teacher-provided reference.
+C11,groq:openai/gpt-oss-20b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-20b:C11,real,incorrect,322160,446690,Uses a five-year birth window from December 2001 to December 2006 instead of completed age 25.
+C11,openrouter:cohere/north-mini-code:free,../oussama-meziane/traces-oussama.csv,openrouter:cohere/north-mini-code:free:C11,real,incorrect,0,446690,Uses births in 2025-2026 instead of subtracting 25/26 years and adds an unrequested December order period.
+C11,groq:qwen/qwen3.8-27b,../oussama-meziane/traces-oussama.csv,groq:qwen/qwen3.8-27b:C11,real,correct,446690,446690,Matches the teacher-provided reference.
+C11,openrouter:dots-studio/dots-3-note-preview:free,../oussama-meziane/traces-oussama.csv,openrouter:dots-studio/dots-3-note-preview:free:C11,real,correct,446690,446690,Matches the teacher-provided reference.
+C12,groq:openai/gpt-oss-120b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-120b:C12,real,correct,1666490,1666490,Matches the teacher-provided reference.
+C12,groq:openai/gpt-oss-20b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-20b:C12,real,correct,1666490,1666490,Matches the teacher-provided reference.
+C12,openrouter:cohere/north-mini-code:free,../oussama-meziane/traces-oussama.csv,openrouter:cohere/north-mini-code:free:C12,real,correct,1666490,1666490,Matches the teacher-provided reference.
+C12,groq:qwen/qwen3.8-27b,../oussama-meziane/traces-oussama.csv,groq:qwen/qwen3.8-27b:C12,real,correct,1666490,1666490,Matches the teacher-provided reference.
+C12,openrouter:dots-studio/dots-3-note-preview:free,../oussama-meziane/traces-oussama.csv,openrouter:dots-studio/dots-3-note-preview:free:C12,real,correct,1666490,1666490,Matches the teacher-provided reference.
+C13,groq:openai/gpt-oss-120b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-120b:C13,real,correct,107740,107740,Matches the teacher-provided reference.
+C13,groq:openai/gpt-oss-20b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-20b:C13,real,correct,107740,107740,Matches the teacher-provided reference.
+C13,openrouter:cohere/north-mini-code:free,../pablo-laxague/traces-td1.csv,openrouter:cohere/north-mini-code:free:C13,real,correct,107740,107740,Matches the teacher-provided reference.
+C13,groq:qwen/qwen3.8-27b,../pablo-laxague/traces-td1.csv,groq:qwen/qwen3.8-27b:C13,real,correct,107740,107740,Matches the teacher-provided reference.
+C13,openrouter:dots-studio/dots-3-note-preview:free,../pablo-laxague/traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C13,real,correct,107740,107740,Matches the teacher-provided reference.
+C14,groq:openai/gpt-oss-120b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-120b:C14,real,correct,0,0,Matches the teacher-provided reference.
+C14,groq:openai/gpt-oss-20b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-20b:C14,real,correct,0,0,Matches the teacher-provided reference.
+C14,openrouter:cohere/north-mini-code:free,../pablo-laxague/traces-td1.csv,openrouter:cohere/north-mini-code:free:C14,real,correct,0,0,Matches the teacher-provided reference.
+C14,groq:qwen/qwen3.8-27b,../pablo-laxague/traces-td1.csv,groq:qwen/qwen3.8-27b:C14,real,correct,0,0,Matches the teacher-provided reference.
+C14,openrouter:dots-studio/dots-3-note-preview:free,../pablo-laxague/traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C14,real,correct,0,0,Matches the teacher-provided reference.
+C15,groq:openai/gpt-oss-120b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C15,real,correct,168680,168680,Matches the teacher-provided reference.
+C15,groq:openai/gpt-oss-20b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C15,real,correct,168680,168680,Matches the teacher-provided reference.
+C15,openrouter:cohere/north-mini-code:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C15,real,correct,168680,168680,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
+C15,groq:qwen/qwen3.8-27b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C15,real,incorrect,0,168680,"The birthday must be both <= 09-25 and > 09-25, so no customer matches. The birth year is not checked."
+C15,openrouter:dots-studio/dots-3-note-preview:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C15,real,correct,168680,168680,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
+C16,groq:openai/gpt-oss-120b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C16,real,correct,376740,376740,Matches the teacher-provided reference.
+C16,groq:openai/gpt-oss-20b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C16,real,correct,376740,376740,Matches the teacher-provided reference.
+C16,openrouter:cohere/north-mini-code:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C16,real,correct,376740,376740,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
+C16,groq:qwen/qwen3.8-27b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C16,real,incorrect,367050,376740,Wrong birthday boundaries: excludes customers turning 25 on the reference day and includes those turning 26 that day.
+C16,openrouter:dots-studio/dots-3-note-preview:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C16,real,incorrect,218760,376740,Birth dates after 25 September 2001 select customers younger than 25. The final birthday OR condition has no effect. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
+C17,groq:openai/gpt-oss-120b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-120b:C17,real,correct,258180,258180,Matches the teacher-provided reference.
+C17,groq:openai/gpt-oss-20b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:openai/gpt-oss-20b:C17,real,correct,258180,258180,Matches the teacher-provided reference.
+C17,openrouter:cohere/north-mini-code:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:cohere/north-mini-code:free:C17,real,incorrect,197080,258180,"Builds month-year instead of month-day with substr(birth_date,1,4), so the birthday adjustment is wrong."
+C17,groq:qwen/qwen3.8-27b,../kit-td1/traces-valec-c05-c06-c17.csv,groq:qwen/qwen3.8-27b:C17,real,incorrect,248490,258180,Wrong birthday boundaries: excludes customers turning 25 on the reference day and includes those turning 26 that day.
+C17,openrouter:dots-studio/dots-3-note-preview:free,../kit-td1/traces-valec-c05-c06-c17.csv,openrouter:dots-studio/dots-3-note-preview:free:C17,real,correct,258180,258180,Matches the teacher-provided reference.
+C18,groq:openai/gpt-oss-120b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-120b:C18,real,correct,62480,62480,Matches the teacher-provided reference.
+C18,groq:openai/gpt-oss-20b,../pablo-laxague/traces-td1.csv,groq:openai/gpt-oss-20b:C18,real,correct,62480,62480,Matches the teacher-provided reference.
+C18,openrouter:cohere/north-mini-code:free,../pablo-laxague/traces-td1.csv,openrouter:cohere/north-mini-code:free:C18,real,correct,62480,62480,Matches the teacher-provided reference.
+C18,groq:qwen/qwen3.8-27b,../pablo-laxague/traces-td1.csv,groq:qwen/qwen3.8-27b:C18,real,correct,62480,62480,Matches the teacher-provided reference.
+C18,openrouter:dots-studio/dots-3-note-preview:free,../pablo-laxague/traces-td1.csv,openrouter:dots-studio/dots-3-note-preview:free:C18,real,incorrect,39580,62480,Misses customers whose year difference is 26 but whose birthday has not happened yet; they are still 25 on the order date.
+C19,groq:openai/gpt-oss-120b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-120b:C19,real,incorrect,0,1990,"Requires birth_date to equal the reference date minus 25 years, selecting only one birthday instead of a one-year range."
+C19,groq:openai/gpt-oss-20b,../oussama-meziane/traces-oussama.csv,groq:openai/gpt-oss-20b:C19,real,correct,1990,1990,Matches the teacher-provided reference.
+C19,openrouter:cohere/north-mini-code:free,../oussama-meziane/traces-oussama.csv,openrouter:cohere/north-mini-code:free:C19,real,incorrect,0,1990,"Subtracts date strings and divides by 365. SQLite's numeric conversion does not give elapsed days, so the computed birth-date bounds are wrong."
+C19,groq:qwen/qwen3.8-27b,../oussama-meziane/traces-oussama.csv,groq:qwen/qwen3.8-27b:C19,real,incorrect,83580,1990,Compares year strings to a full date with <= and does not enforce an upper age bound; customers older than 25 can match.
+C19,openrouter:dots-studio/dots-3-note-preview:free,../oussama-meziane/traces-oussama.csv,openrouter:dots-studio/dots-3-note-preview:free:C19,real,correct,1990,1990,Matches the teacher-provided reference.
+C20,groq:openai/gpt-oss-120b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-120b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,groq:openai/gpt-oss-20b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:openai/gpt-oss-20b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,openrouter:cohere/north-mini-code:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:cohere/north-mini-code:free:C20,real,correct,1106090,1106090,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
+C20,groq:qwen/qwen3.8-27b,../sharbel-khoury/traces-C15-C16-C20.csv,groq:qwen/qwen3.8-27b:C20,real,correct,1106090,1106090,Matches the teacher-provided reference.
+C20,openrouter:dots-studio/dots-3-note-preview:free,../sharbel-khoury/traces-C15-C16-C20.csv,openrouter:dots-studio/dots-3-note-preview:free:C20,real,correct,1106090,1106090,Matches the teacher-provided reference. Attempt 2 after HTTP 401; the OpenRouter key was corrected. Both attempts are retained.
