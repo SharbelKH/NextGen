@@ -1,0 +1,11 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C03,groq:openai/gpt-oss-120b,traces-C03-C04.csv,groq:openai/gpt-oss-120b:C03,real,correct,936350,936350,Matches the reference answer.
+C03,groq:openai/gpt-oss-20b,traces-C03-C04.csv,groq:openai/gpt-oss-20b:C03,real,correct,936350,936350,Matches the reference answer.
+C03,groq:qwen/qwen3.8-27b,traces-C03-C04.csv,groq:qwen/qwen3.8-27b:C03,real,sql_rejected,,936350,SQL rejected by validator; response began with Markdown ```sql formatting. No numeric result recorded.
+C03,openrouter:cohere/north-mini-code:free,traces-C03-C04.csv,openrouter:cohere/north-mini-code:free:C03,real,correct,936350,936350,Matches the reference answer.
+C03,openrouter:dots-studio/dots-3-note-preview:free,traces-C03-C04.csv,openrouter:dots-studio/dots-3-note-preview:free:C03,real,correct,936350,936350,Matches the reference answer.
+C04,groq:openai/gpt-oss-120b,traces-C03-C04.csv,groq:openai/gpt-oss-120b:C04,real,correct,2826250,2826250,Matches the reference answer.
+C04,groq:openai/gpt-oss-20b,traces-C03-C04.csv,groq:openai/gpt-oss-20b:C04,real,correct,2826250,2826250,Matches the reference answer.
+C04,groq:qwen/qwen3.8-27b,traces-C03-C04.csv,groq:qwen/qwen3.8-27b:C04,real,correct,2826250,2826250,Matches the reference answer.
+C04,openrouter:cohere/north-mini-code:free,traces-C03-C04.csv,openrouter:cohere/north-mini-code:free:C04,real,correct,2826250,2826250,Matches the reference answer.
+C04,openrouter:dots-studio/dots-3-note-preview:free,traces-C03-C04.csv,openrouter:dots-studio/dots-3-note-preview:free:C04,real,correct,2826250,2826250,Matches the reference answer.
