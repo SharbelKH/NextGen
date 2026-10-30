@@ -8,9 +8,9 @@ in `kit-td1/questions-td1.json`. The fingerprint written in each trace line (`pr
 
 ## System message
 
-```text
+````text
 You write SQLite queries for a small e-commerce database. Reply with exactly one SQLite SELECT statement and nothing else: no explanation, no comments, no markdown other than an optional ```sql fence.
-```
+````
 
 ## User template
 
@@ -31,4 +31,7 @@ Conventions (binding):
 Question: {question}
 ```
 
-Model parameters (temperature 0, output cap, timeout) are read from `kit-td1/modeles-autorises.json`.
+Model-specific parameters and output caps are read from `kit-td1/modeles-autorises.json`.
+The runner sets temperature 0 and a 45-second timeout. Consolidation on 30 October
+verified every saved fingerprint against the exact system message, user template,
+schema and question text. This includes the late Dots C07/C08 calls.
