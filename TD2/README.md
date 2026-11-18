@@ -4,11 +4,11 @@ Course TD 2: the k-of-n vote, the wrong consensus and the routing rule. It works
 (`../TD1/kit-td1/traces-td1.csv`) and `../TD1/kit-td1/reference-td1.csv`; no new model calls.
 Assignment: https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/students/kit-td1/enonce-td2-en.html
 
-| Folder | Step |
-|---|---|
-| [`pair-a/`](pair-a/README.md) | Step 1 — `vote_k_sur_n`, tests, 2-of-3 panel against 3-of-5 quorum on the twenty questions |
-| [`pair-b/`](pair-b/c09-analysis.md) | Step 2 — shared wrong values, faulty SQL clauses, executed delta queries |
-| `pair-c/` | Step 3 — routing rule and `atelier-routage.py` |
+| Folder                              | Step                                                                                       |
+| ----------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`pair-a/`](pair-a/README.md)       | Step 1 — `vote_k_sur_n`, tests, 2-of-3 panel against 3-of-5 quorum on the twenty questions |
+| [`pair-b/`](pair-b/c09-analysis.md) | Step 2 — shared wrong values, faulty SQL clauses, executed delta queries                   |
+| `pair-c/`                           | Step 3 — routing rule and `atelier-routage.py`                                             |
 
 ## Pair B — shared wrong values
 
@@ -22,14 +22,15 @@ and C19. Replay from the repository root with
 - **C09 — Sherbal Al khouri:** [analysis and replay commands](pair-b/c09-analysis.md),
   both complete saved model queries, an independent reference check, and the
   [executed customer-level delta](pair-b/c09-delta.csv).
-- **C19 — contributed by Pair A:** [analysis and replay command](pair-b/c19-analysis.md), both
-  complete saved model queries and the [executed customer-level delta](pair-b/c19-delta.csv).
+- **C19 — Pablo Laxague:** [analysis and replay command](pair-b/Pablo.ipynb), both
+  complete saved model queries and the [executed customer-level delta](pair-b/Pablo.ipynb).
 
 Pair B's [review of Pair A](pair-b/review.md) records checks, fixes, verified
 results, and remaining limitations. Pair B will add its Pair C review to the
 same document after reviewing the routing work.
 
 The session report is `reports/td2.md`. Hand-in: Sunday 22 November 2026, 23:59.
+
 ## TD2 — Pair C: AI Model Routing Policy and Simulator
 
 ### Project Objective
@@ -43,6 +44,7 @@ We used the results from 20 TD1 questions to define model-selection rules and ad
 **Role:** Routing policy design, TD1 accuracy analysis, and final report.
 
 **Work completed:**
+
 - Analyzed the accuracy of five AI models across eight question families.
 - Selected suitable models based on TD1 results and portfolio costs.
 - Defined verification rules for internal dashboards, customer-facing figures, and payout amounts.
@@ -56,6 +58,7 @@ We used the results from 20 TD1 questions to define model-selection rules and ad
 **Role:** Python routing simulator implementation and validation.
 
 **Work completed:**
+
 - Adapted the professor's original `atelier-routage.py` simulator using the Pair C routing policy.
 - Replaced the fictional resources with GPT-20B, GPT-120B, and Qwen.
 - Integrated TD1 accuracy results for all eight question families: F1, F2, F2b, F3, F1+F3, F1+F2, F2+F3, and F1+F2+F3.
@@ -78,15 +81,15 @@ For example, GPT-20B is selected for F1 because it achieved 6/6 in TD1, while GP
 
 ### 4. Project Files
 
-| File | Description |
-|---|---|
-| `TD2/routing-policy.md` | Routing policy and TD1 accuracy analysis |
-| `TD2/pair-c/atelier-routage.py` | Adapted Python routing simulator |
-| `TD2/pair-c/atelier-routage-original.py` | Original simulator backup |
-| `TD2/pair-c/results-before.txt` | Results before adaptation |
-| `TD2/pair-c/results-after.txt` | Results after adaptation |
-| `TD2/pair-c/deferrable-after.txt` | Isolated deferrable scenario |
-| `TD2/reports/td2.md` | Final group report |
+| File                                     | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| `TD2/routing-policy.md`                  | Routing policy and TD1 accuracy analysis |
+| `TD2/pair-c/atelier-routage.py`          | Adapted Python routing simulator         |
+| `TD2/pair-c/atelier-routage-original.py` | Original simulator backup                |
+| `TD2/pair-c/results-before.txt`          | Results before adaptation                |
+| `TD2/pair-c/results-after.txt`           | Results after adaptation                 |
+| `TD2/pair-c/deferrable-after.txt`        | Isolated deferrable scenario             |
+| `TD2/reports/td2.md`                     | Final group report                       |
 
 ### 5. How to Run the Simulator
 
