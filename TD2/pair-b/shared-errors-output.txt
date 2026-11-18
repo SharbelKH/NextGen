@@ -1,0 +1,12 @@
+
+C02: shared incorrect value = 0
+  groq:openai/gpt-oss-20b | reference = 590320
+  openrouter:dots-studio/dots-3-note-preview:free | reference = 590320
+
+C09: shared incorrect value = 0
+  openrouter:cohere/north-mini-code:free | reference = 487980
+  groq:qwen/qwen3.8-27b | reference = 487980
+
+C19: shared incorrect value = 0
+  groq:openai/gpt-oss-120b | reference = 1990
+  openrouter:cohere/north-mini-code:free | reference = 1990

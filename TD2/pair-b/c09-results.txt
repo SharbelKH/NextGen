@@ -1,0 +1,11 @@
+C09 replay on TD1/kit-td1/data/boutique.sqlite (SQLite, read only)
+North Mini Code stored SQL: 0 cents
+Qwen 3.8 27B stored SQL: 0 cents
+Independent C09 age check: 487980 cents
+Delta SELECT: 6 eligible customers
+Sum(reference_revenue_cents): 487980 cents
+Sum(north_missed_cents): 487980 cents
+Sum(qwen_missed_cents): 487980 cents
+Reference minus each model: 487980 cents
+
+See c09-delta.csv for the exact customer_id rows and per-customer revenue.
