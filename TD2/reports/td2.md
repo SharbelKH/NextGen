@@ -12,7 +12,8 @@ exactly 25 years old on 2026-09-26. The real TD1 trace cells
 `groq:qwen/qwen3.8-27b:C09` each record `incorrect`, **0 cents**.
 The independent `TD1/kit-td1/reference-td1.csv` records **487980 cents**.
 The complete scan of all five models found C02, C09, and C19 as cases of
-shared wrong values ([scan and output](../pair-b/README.md)).
+shared wrong values ([scan](../pair-b/find_shared_errors.py) and
+[output](../pair-b/shared-errors-output.txt)).
 
 **Declared quorums:** The fixed **2-of-3** panel (GPT-OSS 120B 487980,
 North 0, Qwen 0) returns **0, wrong consensus**. The **3-of-5** panel adds
@@ -76,6 +77,6 @@ read-only on `TD1/kit-td1/data/boutique.sqlite` and again returned 0;
 
 **Limits and next step:** This explains C09 in this saved batch and database;
 it does not establish a general model error rate. Pair B's C02 work is in
-[the Pair B folder](../pair-b/README.md), while C19's SQL diagnosis remains
+[the analysis notebook](../pair-b/c02-analysis.ipynb), while C19's SQL diagnosis remains
 with its owner. The group should integrate these contributions and routing
 results before the TD2 hand-in.
