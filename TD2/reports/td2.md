@@ -1,4 +1,4 @@
-
+﻿
 # TD2 — Pair C: Routing Rule and Simulation Report
 
 ## 1. Objective
@@ -9,7 +9,7 @@ of an incorrect answer.
 
 Our policy covers eight question families and uses the five
 models tested in TD1. The detailed accuracy results and
-routing rules are in `TD2/routing-policy.md`.
+routing rules are in [Pair C routing policy](../pair-c/routing-policy.md).
 
 ## 2. Simulator Results: Before and After
 
@@ -210,3 +210,4 @@ it does not establish a general model error rate. Pair B's C02 work is in
 [the analysis notebook](../pair-b/c02-analysis.ipynb), and C19's SQL diagnosis is in
 [Pair A's analysis](../pair-a/c19-analysis.md). The group should integrate these contributions and routing
 results before the TD2 hand-in.
+
