@@ -1,5 +1,7 @@
 # TD 2 — Pair A: the k-of-n vote
 
+**Pair A:** Yehor Nalyvaiko (`yehor-na`), Oussama Meziane, Adam Nasri.
+
 Subject TD 2 ("vote and route", 18 November 2026), stored in the group's `TD3/` folder.
 Input: the merged TD 1 traces `../../TD1/kit-td1/traces-td1.csv` (100 cells, 108 rows, all `real`) and
 `../../TD1/kit-td1/reference-td1.csv`. No new network call.
