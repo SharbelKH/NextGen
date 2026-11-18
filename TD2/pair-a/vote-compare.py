@@ -47,6 +47,25 @@ def last_attempts(rows):
     return last
 
 
+def validate_batch(refs, last):
+    """Fail before publishing a table if the saved TD1 experiment is incomplete."""
+    expected = {f"C{i:02d}" for i in range(1, 21)}
+    if set(refs) != expected:
+        raise ValueError(f"Expected references for C01-C20; missing={sorted(expected - set(refs))}, "
+                         f"extra={sorted(set(refs) - expected)}")
+
+    missing = [(case, provider, model) for case in sorted(expected)
+               for provider, model in QUORUM_3_OF_5 if (case, provider, model) not in last]
+    if missing:
+        raise ValueError(f"Missing {len(missing)} stored model/question cells, first: {missing[0]}")
+
+    for case in sorted(expected):
+        hashes = {last[(case, provider, model)]["prompt_sha256"]
+                  for provider, model in QUORUM_3_OF_5}
+        if "" in hashes or len(hashes) != 1:
+            raise ValueError(f"Inconsistent or missing prompt hashes for {case}: {sorted(hashes)}")
+
+
 def proposals(last, case, members):
     out = []
     for provider, model in members:
@@ -72,6 +91,7 @@ def main():
     rows = list(csv.DictReader(TRACES.open(encoding="utf-8-sig", newline="")))
     refs = {r["case_id"]: int(r["revenue_cents"]) for r in csv.DictReader(REFERENCES.open(encoding="utf-8-sig"))}
     last = last_attempts(rows)
+    validate_batch(refs, last)
     table = []
     for case in sorted(refs):
         p3, p5 = proposals(last, case, PANEL_2_OF_3), proposals(last, case, QUORUM_3_OF_5)
@@ -90,7 +110,7 @@ def main():
 
     fields = [k for k in table[0] if not k.startswith("text")]
     with (HERE / "vote-comparison.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows({k: r[k] for k in fields} for r in table)
 

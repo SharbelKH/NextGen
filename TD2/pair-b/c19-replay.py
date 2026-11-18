@@ -1,7 +1,7 @@
 """C19 replay: stored model SQL, independent check and delta, read only.
 
-Run from the repository root: python3 -B TD2/pair-a/c19-replay.py
-Writes TD2/pair-a/c19-results.txt and TD2/pair-a/c19-delta.csv.
+Run from the repository root: python3 -B TD2/pair-b/c19-replay.py
+Writes TD2/pair-b/c19-results.txt and TD2/pair-b/c19-delta.csv.
 """
 import csv
 import sqlite3

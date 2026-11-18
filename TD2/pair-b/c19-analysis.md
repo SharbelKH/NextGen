@@ -1,4 +1,4 @@
-# C19 — shared wrong result, Pair A
+# C19 — shared wrong result, Pair B evidence (contributed by Pair A)
 
 ## Observed results and vote
 
@@ -18,7 +18,7 @@ reference date 2026-09-25**. The saved TD1 traces (`../../TD1/kit-td1/traces-td1
 
 With **k=2, n=3**, the two zeros win: **wrong consensus 0**. With **k=3, n=5**, the vote splits
 2–2–1 (0, 1990, 83580): **abstain**, maximum two votes. The twenty decisions are in
-[`vote-comparison.csv`](vote-comparison.csv).
+[`vote-comparison.csv`](../pair-a/vote-comparison.csv).
 
 ## Why the two SQL queries fail
 
@@ -68,7 +68,7 @@ an independent check of `reference-td1.csv` (the TD1 reference was computed sepa
 Replay from the repository root (read-only on `TD1/kit-td1/data/boutique.sqlite`, rewrites
 `c19-results.txt` and `c19-delta.csv`):
 
-    python3 -B TD2/pair-a/c19-replay.py
+    python3 -B TD2/pair-b/c19-replay.py
 
 ## Limits
 

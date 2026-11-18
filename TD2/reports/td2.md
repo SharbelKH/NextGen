@@ -93,7 +93,7 @@ resource consumption and reliability.
 
 ---
 
-## Pair A: the k-of-n vote and C19 (Yehor Nalyvaiko, Oussama Meziane, Adam Nasri)
+## Pair A: the k-of-n vote (Yehor Nalyvaiko, Oussama Meziane, Adam Nasri)
 
 **Vote.** `vote_k_sur_n` ([code](../pair-a/skeleton-multi-llm-en.py)) checks that `k` is a strict
 majority (`n // 2 < k <= n`), refuses a duplicate `provider:model`, counts only executed values, and
@@ -114,27 +114,30 @@ quorum abstains. C17: the panel splits three ways, the quorum reaches 258180 (co
 panel is correct, but in the quorum 20B and Dots agree on a wrong 0 and block the majority. The
 larger quorum removes the wrong decisions at the cost of two more abstentions.
 
-**C19, shared wrong value 0** ([analysis](../pair-a/c19-analysis.md)). Reference **1990 cents**.
-GPT-OSS 120B keeps only customers born on 2001-09-25 (`birth_date = date('2026-09-25', '-25 years')`),
-whose 25th birthday is the reference date, instead of the one-year cohort born after 2000-09-25
-and on or before 2001-09-25. North Mini Code subtracts two date strings: SQLite reads only the years,
-so the "age in days" is 25, divided by 365 gives 0, and its window falls in 2025–2026, where no
-customer is born. The [executed delta](../pair-a/c19-delta.csv) has a single line: C002, born
-2001-09-24, one product d at 1990 cents on 2026-09-07, missed by both models; 1990 − 0 = 1990.
-The two errors are different but both produce an empty selection, and the empty sum is 0.
-
 **Limits.** 20 questions, one run per model: these counts describe this batch, not a general error
 rate, and a quorum does not guarantee a correct answer.
 
 ---
 
-## Pair B — Shared Wrong SQL Result (C09)
+## Pair B — shared wrong SQL results
 
-**Contributor:** Sherbal Al khouri
+The cases use saved TD1 traces; no new model calls were made for this section.
+C19 was analyzed by Yehor Nalyvaiko, Oussama Meziane and Adam Nasri;
+C09 was analyzed by Sherbal Al khouri. C02 has its own linked notebook and
+executed delta files.
 
-This is an in-progress group report. Pair B's C09 contribution is recorded below;
-other members' sections and the final group review are still pending. The
-workshop uses saved TD1 traces; no new model calls were made for this section.
+### C19 (Pair A contribution)
+
+**C19, shared wrong value 0** ([analysis](../pair-b/c19-analysis.md)). Reference **1990 cents**.
+GPT-OSS 120B keeps only customers born on 2001-09-25 (`birth_date = date('2026-09-25', '-25 years')`),
+whose 25th birthday is the reference date, instead of the one-year cohort born after 2000-09-25
+and on or before 2001-09-25. North Mini Code subtracts two date strings: SQLite reads only the years,
+so the "age in days" is 25, divided by 365 gives 0, and its window falls in 2025–2026, where no
+customer is born. The [executed delta](../pair-b/c19-delta.csv) has a single line: C002, born
+2001-09-24, one product d at 1990 cents on 2026-09-07, missed by both models; 1990 − 0 = 1990.
+The two errors are different but both produce an empty selection, and the empty sum is 0.
+
+### C09 (Sherbal Al khouri)
 
 **Question:** revenue excluding VAT in euro cents from all orders by customers
 exactly 25 years old on 2026-09-26. The real TD1 trace cells
@@ -208,5 +211,5 @@ read-only on `TD1/kit-td1/data/boutique.sqlite` and again returned 0;
 **Limits and next step:** This explains C09 in this saved batch and database;
 it does not establish a general model error rate. Pair B's C02 work is in
 [the analysis notebook](../pair-b/c02-analysis.ipynb), and C19's SQL diagnosis is in
-[Pair A's analysis](../pair-a/c19-analysis.md). The group should integrate these contributions and routing
+[the C19 analysis](../pair-b/c19-analysis.md). The group should integrate these contributions and routing
 results before the TD2 hand-in.

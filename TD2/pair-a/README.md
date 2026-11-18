@@ -47,6 +47,9 @@ Declared panels:
 For each model the last attempt of the cell is used (the merged file is chronological per cell; the eight access errors
 of the first attempts were all followed by a successful second attempt). An attempt counts as a vote only when its verdict
 is `correct` or `incorrect` with a value; `sql_rejected` (Qwen C03, Qwen C10) is an unavailable member.
+The comparison driver now checks that C01–C20 each have a reference and all five stored model cells with
+one consistent prompt hash before it publishes the table. A missing trace is flagged rather than presented
+as a measured unavailability. An executed trace with an error or rejected SQL still stays in the panel without voting.
 
 ## Test outputs
 
@@ -116,8 +119,8 @@ Full table with the last value of each model: `vote-comparison.md`.
 - With these traces the 3-of-5 quorum makes **no wrong decision** (0 against 2 for the panel), at the price of **two more
   abstentions** (4 against 2). It also recovers one question the panel could not decide (C17) and loses one it decided
   correctly (C02).
-- Every wrong consensus comes from **age questions** (C09, C19) where two models share the same wrong reading of
-  "completed age". Agreement is not proof: the panel's 2 votes on 0 are as strong as 2 votes on the right value.
+- Every wrong consensus comes from **age questions** (C09, C19). In each case two different faulty age predicates
+  happen to yield 0; the models do not necessarily make the same SQL mistake. Agreement is not proof of correctness.
 - An abstention is a correct output of the vote, not a failure: the system says it cannot decide instead of inventing a value.
 - Limits: 20 questions and one run per model. These counts describe this batch only; they give neither a general error rate
   nor a guarantee that a quorum avoids wrong answers.
