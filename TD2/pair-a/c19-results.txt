@@ -1,0 +1,12 @@
+C19 replay on TD1/kit-td1/data/boutique.sqlite (SQLite, read only)
+GPT-OSS 120B stored SQL: 0 cents
+North Mini Code stored SQL: 0 cents
+Reference (reference-td1.csv): 1990 cents
+Customers exactly 25 on 2026-09-25: 6 C005 2000-09-26, C007 2000-11-30, C009 2001-03-10, C008 2001-05-15, C002 2001-09-24, C001 2001-09-25
+Customers born on 2001-09-25 exactly (GPT-OSS 120B cohort): 1 C001
+North age expression for a birth date 2001-09-24: '2026-09-25' - '2001-09-24' = 25, / 365 = 0, window (2025-09-25, 2026-09-25]
+Delta SELECT: 1 eligible customer(s) with product d orders in September
+Sum(reference_revenue_cents): 1990 cents
+Sum(gpt120b_missed_cents): 1990 cents
+Sum(north_missed_cents): 1990 cents
+Reference minus GPT-OSS 120B: 1990 cents; reference minus North: 1990 cents
