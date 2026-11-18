@@ -4,7 +4,7 @@ This is an in-progress group report. Pair B's C09 contribution is recorded below
 other members' sections and the final group review are still pending. The
 workshop uses saved TD1 traces; no new model calls were made for this section.
 
-## Pair B: C09, shared wrong SQL result (Sharbel Khoury)
+## Pair B: C09, shared wrong SQL result (Sherbal Al khouri)
 
 **Question:** revenue excluding VAT in euro cents from all orders by customers
 exactly 25 years old on 2026-09-26. The real TD1 trace cells

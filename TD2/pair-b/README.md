@@ -1,5 +1,7 @@
 # TD2 Pair B — shared wrong values
 
+**C09 contribution:** Sherbal Al khouri.
+
 The scan [`find_shared_errors.py`](find_shared_errors.py) reads the saved TD1
 traces without new model calls. Its captured
 [`shared-errors-output.txt`](shared-errors-output.txt) identifies C02, C09,
