@@ -121,3 +121,5 @@ Full table with the last value of each model: `vote-comparison.md`.
 - An abstention is a correct output of the vote, not a failure: the system says it cannot decide instead of inventing a value.
 - Limits: 20 questions and one run per model. These counts describe this batch only; they give neither a general error rate
   nor a guarantee that a quorum avoids wrong answers.
+
+AI assistance was used for the code and the analysis; every result was rerun and checked (tests, workshop output, fresh clone).
