@@ -22,7 +22,7 @@ and C19. Replay from the repository root with
 - **C09 — Sherbal Al khouri:** [analysis and replay commands](pair-b/c09-analysis.md),
   both complete saved model queries, an independent reference check, and the
   [executed customer-level delta](pair-b/c09-delta.csv).
-- **C19:** identified in the scan and vote table; its SQL diagnosis and delta
-  remain to be added by its owner.
+- **C19 — Pair A:** [analysis and replay command](pair-a/c19-analysis.md), both
+  complete saved model queries and the [executed customer-level delta](pair-a/c19-delta.csv).
 
 The session report is `reports/td2.md`. Hand-in: Sunday 22 November 2026, 23:59.
