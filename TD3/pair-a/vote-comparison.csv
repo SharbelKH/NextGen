@@ -1,0 +1,21 @@
+case_id,reference,proposals_5_models,d23_consensus,d23_value,d23_votes,d23_vs_reference,d35_consensus,d35_value,d35_votes,d35_vs_reference,decision_changes
+C01,792800,120b=792800; cohere=792800; qwen=792800; 20b=792800; dots=792800,True,792800,3,correct,True,792800,5,correct,False
+C02,590320,120b=590320; cohere=321340; qwen=590320; 20b=0; dots=0,True,590320,2,correct,False,,2,,True
+C03,936350,120b=936350; cohere=936350; qwen=sql_rejected; 20b=936350; dots=936350,True,936350,2,correct,True,936350,4,correct,False
+C04,2826250,120b=2826250; cohere=2826250; qwen=2826250; 20b=2826250; dots=2826250,True,2826250,3,correct,True,2826250,5,correct,False
+C05,38480,120b=38480; cohere=38480; qwen=38480; 20b=38480; dots=38480,True,38480,3,correct,True,38480,5,correct,False
+C06,0,120b=0; cohere=0; qwen=0; 20b=0; dots=0,True,0,3,correct,True,0,5,correct,False
+C07,13970,120b=13970; cohere=13970; qwen=13970; 20b=13970; dots=13970,True,13970,3,correct,True,13970,5,correct,False
+C08,605580,120b=605580; cohere=1553040; qwen=605580; 20b=605580; dots=605580,True,605580,2,correct,True,605580,4,correct,False
+C09,487980,120b=487980; cohere=0; qwen=0; 20b=487980; dots=548920,True,0,2,wrong,False,,2,,True
+C10,558980,120b=558980; cohere=548920; qwen=sql_rejected; 20b=558980; dots=119410,False,,1,,False,,2,,False
+C11,446690,120b=446690; cohere=0; qwen=446690; 20b=322160; dots=446690,True,446690,2,correct,True,446690,3,correct,False
+C12,1666490,120b=1666490; cohere=1666490; qwen=1666490; 20b=1666490; dots=1666490,True,1666490,3,correct,True,1666490,5,correct,False
+C13,107740,120b=107740; cohere=107740; qwen=107740; 20b=107740; dots=107740,True,107740,3,correct,True,107740,5,correct,False
+C14,0,120b=0; cohere=0; qwen=0; 20b=0; dots=0,True,0,3,correct,True,0,5,correct,False
+C15,168680,120b=168680; cohere=168680; qwen=0; 20b=168680; dots=168680,True,168680,2,correct,True,168680,4,correct,False
+C16,376740,120b=376740; cohere=376740; qwen=367050; 20b=376740; dots=218760,True,376740,2,correct,True,376740,3,correct,False
+C17,258180,120b=258180; cohere=197080; qwen=248490; 20b=258180; dots=258180,False,,1,,True,258180,3,correct,True
+C18,62480,120b=62480; cohere=62480; qwen=62480; 20b=62480; dots=39580,True,62480,3,correct,True,62480,4,correct,False
+C19,1990,120b=0; cohere=0; qwen=83580; 20b=1990; dots=1990,True,0,2,wrong,False,,2,,True
+C20,1106090,120b=1106090; cohere=1106090; qwen=1106090; 20b=1106090; dots=1106090,True,1106090,3,correct,True,1106090,5,correct,False

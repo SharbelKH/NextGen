@@ -1,0 +1,16 @@
+$ python test-vote.py
+PASS  agreement 2-of-3: {'consensus': True, 'value': 100, 'votes': 2, 'models': ['groq:openai/gpt-oss-120b', 'openrouter:cohere/north-mini-code:free']}
+PASS  disagreement 2-of-3 abstains: {'consensus': False, 'value': None, 'votes': 1, 'models': []}
+PASS  one unavailable stays in n: 2 votes of 3 still pass: {'consensus': True, 'value': 100, 'votes': 2, 'models': ['groq:openai/gpt-oss-120b', 'groq:qwen/qwen3.8-27b']}
+PASS  two unavailable: 1 vote of n=3 abstains: {'consensus': False, 'value': None, 'votes': 1, 'models': []}
+PASS  all unavailable: 0 votes, abstains: {'consensus': False, 'value': None, 'votes': 0, 'models': []}
+PASS  wrong consensus is kept (the vote never sees the reference): {'consensus': True, 'value': 0, 'votes': 2, 'models': ['groq:openai/gpt-oss-120b', 'openrouter:cohere/north-mini-code:free']}
+PASS  3-of-5: 3 equal values pass: {'consensus': True, 'value': 5, 'votes': 3, 'models': ['groq:openai/gpt-oss-120b', 'openrouter:cohere/north-mini-code:free', 'groq:openai/gpt-oss-20b']}
+PASS  3-of-5: 2-2-1 abstains: {'consensus': False, 'value': None, 'votes': 2, 'models': []}
+PASS  3-of-5: two unavailable stay in n, 2 votes abstain: {'consensus': False, 'value': None, 'votes': 2, 'models': []}
+PASS  duplicate provider:model refused: duplicate panel member groq:openai/gpt-oss-120b: one model, one vote
+PASS  k not a strict majority refused (k=1, n=3): k=1 is not a strict majority of n=3: n // 2 < k <= n is required
+PASS  k greater than n refused (k=4, n=3): k=4 is not a strict majority of n=3: n // 2 < k <= n is required
+PASS  k = n/2 refused for even n (k=2, n=4): k=2 is not a strict majority of n=4: n // 2 < k <= n is required
+
+13/13 tests passed
