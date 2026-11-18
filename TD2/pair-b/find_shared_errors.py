@@ -2,7 +2,7 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent
+root = Path(__file__).resolve().parents[2]
 trace_path = root / "TD1" / "kit-td1" / "traces-td1.csv"
 
 with trace_path.open(encoding="utf-8-sig", newline="") as stream:
